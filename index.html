@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>TypeScript</h2>
+					<img src="./assets/typescriptlang.webp" style="width: 500px; margin: 2rem auto 4rem auto; background: transparent; background-position: 100% 100%;" >
+				</section>
+				<section data-background="./assets/Screenshot-2019-06-22-at-10.48.52-AM.png" data-background-size="90%">
+				</section>
+				<section>
+					<h2>What is TypeScript?</h2>
+					<img src="./assets/arrows1-1.png">
+				</section>
+				<section>
+					<p>Static and Dynamically typed languages</p>
+					<img src="./assets/1_BddwVWW6hFU0miT9DCbUWQ.png">
+				</section>
+				<section>
+					<h3>To Type or Not to Type?</h3>
+					<img src="./assets/images.jfif" style="width: 40%;">
+					<p>15% of all JavaScript bugs can be detected by TypeScript</p>
+				</section>
+				<section>
+					<h2>Types of TypeScript</h2>
+					<img src="./assets/typescript_different_data_types.png" alt="" style="width: 50%;">
+				</section>
+				<section>
+					<h2>TypeScript Data Types Syntax</h2>
+					<pre data-id="code-animation" style="margin-bottom: 100px;"><code class="hljs" data-trim data-line-numbers>
+						[Keyword] [Variable Name]: [Data Type] = [Value];
+						[Keyword] [Variable Name]: [Data Type];
+					</code></pre>
+					<p>Example:</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						let uname: string = "Suresh Dasari"; // string
+						let age: number = 33; // number
+						let isCompleted: boolean = true; // boolean
+					</code></pre>
+				</section>
+				<section>
+					<h2>How to use Typescript?</h2>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						npm install -g typescript
+					</code></pre>
+				</section>
+				<section>
+					<h3>from JavaScript to TypeScript</h3>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					function my_sum(a, b) {
+					  return a + b;
+					}
+					 
+					let a = 4; 
+					let b = "5";
+					 
+					my_sum(a, b);
+
+					</code></pre>
+				</section>
+				<section>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					function my_sum(a: number, b: number) {
+					  return a + b;
+					}
+
+					</code></pre>
+					<pre data-id="code-animation"><code class="hljs fragment" data-trim data-line-numbers >
+						let a = 4; 
+						let b = "5";
+
+						my_sum(a, b);
+						</code></pre>
+
+					<code data-id="code-animation"><code class="hljs fragment" data-trim data-line-numbers style="color: #bd4147; font-size: 20px">
+						Argument of type 'string' is not assignable to parameter of type 'number'.
+						</code></code>
+						
+					
+				</section>
+				<section>
+					<pre style="width: 1000px">
+						<code>let b: number = "5" // Type '"5"' is not assignable to type 'number'.
+let b: number = 5 // Everything ok. 
+						</code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
